@@ -23,31 +23,30 @@ from sklearn.model_selection import GridSearchCV
 #     return preprocessor  # Return the preprocessor
 
 
-def create_preprocessor(categorical_features, numerical_features):
-    # Define the column transformer with an imputer
-    preprocessor = ColumnTransformer(
-        transformers=[
-            ('num', Pipeline(steps=[
-                ('imputer', SimpleImputer(strategy='mean')),  # or 'median', 'most_frequent'
-                ('scaler', StandardScaler())
-            ]), numerical_features),
-            ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_features)
-        ]
-    )
+def create_numerical_preprocessor(numerical_features):
+    preprocessor = Pipeline(steps=[
+        ('imputer', SimpleImputer(strategy='mean')),  # or 'median', 'most_frequent'
+        ('scaler', StandardScaler())
+    ])
     return preprocessor
 
-# Dictionary of regression models
-models = {
-    'Linear Regression': LinearRegression(),
-    'Lasso Regression': Lasso(alpha=0.1),
-    'Ridge Regression': Ridge(alpha=1.0),
-    'Random Forest Regression': RandomForestRegressor(),
-    'Support Vector Regression': SVR(),
-    'Elastic Net': ElasticNet(),
-    'Decision Tree Regression': DecisionTreeRegressor(),
-    'Gradient Boost Regression': GradientBoostingRegressor(),
-    'KNeighbors Regression': KNeighborsRegressor()
-}
+# Create a preprocessor for categorical features (if needed)
+def create_categorical_preprocessor(categorical_features):
+    preprocessor = OneHotEncoder(handle_unknown='ignore')
+    return preprocessor
+
+# Dictionary of regression models (Add this to Main script)
+# models = {
+#     'Linear Regression': LinearRegression(),
+#     'Lasso Regression': Lasso(alpha=0.1),
+#     'Ridge Regression': Ridge(alpha=1.0),
+#     'Random Forest Regression': RandomForestRegressor(),
+#     'Support Vector Regression': SVR(),
+#     'Elastic Net': ElasticNet(),
+#     'Decision Tree Regression': DecisionTreeRegressor(),
+#     'Gradient Boost Regression': GradientBoostingRegressor(),
+#     'KNeighbors Regression': KNeighborsRegressor()
+# }
 
 def create_pipelines(preprocessor, models):
     # Create pipelines for each model
@@ -62,6 +61,12 @@ def create_pipelines(preprocessor, models):
 # ----------------------------------------------------------------------------------
 
 def evaluate_models(pipelines, X_train, y_train, X_test, y_test):
+     # Print shapes and types for debugging
+    print("X_train shape:", X_train.shape)
+    print("y_train shape:", y_train.shape)
+    print("X_test shape:", X_test.shape)
+    print("y_test shape:", y_test.shape)
+    
     # Dictionary to hold performance metrics
     performance_metrics = {}
 
@@ -94,10 +99,13 @@ def evaluate_models(pipelines, X_train, y_train, X_test, y_test):
     # Convert the performance metrics to a DataFrame
     performance_df = pd.DataFrame(performance_metrics).T
 
+    # Sort the DataFrame by Mean Absolute Error (MAE) from highest to lowest
+    performance_df_sorted = performance_df.sort_values(by='Mean Absolute Error', ascending=False)
+
     # Display the performance metrics in a single line
-    print(performance_df.to_string(index=True))
+    print(performance_df_sorted.to_string(index=True))
     
-    return performance_df  # Optionally return the DataFrame for further use
+    return performance_df_sorted  # Optionally return the sorted DataFrame for further use
     
 # ----------------------------------------------------------------------------------
 # Hyper Parameter Tuning Using Grid Search
