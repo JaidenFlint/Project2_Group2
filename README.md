@@ -129,7 +129,7 @@ We trained several machine learning models to predict the continuous actual_prod
 
 ## _Results_
 
-The Gradient Boosting Regressor and Random Forest Regressor provided the best performance, with the highest R² score and the lowest error rate. 
+At the beginning the Regression Models applied to the dataset with the WIP column modification of the NaN values to be replaced with the mean value of the column, did not have the best scores for any of the models. All the testing scores were below 50%. Even after applying the Hyper Parameter Tuning by use of the Grid Search function, the scores did no better. The anaylsis was revisted and tested with the NaN values being zero which still did not improve the testing metric scores. Lastly we tried dropping the NaN values along with rows associated with them. This did drop our number of instances down by almost half. Then with rerunning the models again with NaN values dropped, the testing metric scores came up to more reasonable values. The Gradient Boosting Regressor and Random Forest Regressor provided the best performance, with the highest R² score and the lowest error rate after cleaning the data by dropping the NaN instances.
 
 ## _Conclusion_
 
