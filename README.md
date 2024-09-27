@@ -1,1 +1,143 @@
-# Project2_Group2
+<div id="header" align="center">
+
+  # Garment Worker Productivity Prediction  
+</h1>
+</div>
+
+<div id="header" align="center">
+
+</div>
+
+## _Project Overview_
+
+This project aims to predict the productivity of garment employees based on features such as working hours, incentives, overtime, and more. The goal is to develop machine learning models that can accurately predict the continuous productivity score for garment workers, helping factories understand key drivers of productivity and optimize their operations. 
+
+## _Dataset_ 
+
+The dataset used for this project is Garment Worker Productivity, which consists of 1,197 rows and 15 features, including:
+
+  •	date
+  
+  •	quarter
+ 
+•	department
+ 
+•	day
+
+•	team
+
+•	targeted_productivity
+
+•	smv (Standard Minute Value)
+
+•	wip (Work In Progress)
+
+•	over_time
+
+•	incentive
+
+•	idle_time
+
+•	idle_men
+
+•	no_of_style_change
+
+•	no_of_workers
+
+•	actual_productivity
+
+
+ 
+The target variable, actual_productivity, is continuous and is the primary variable we aim to predict using various machine learning models. 
+
+## _Data Cleaning and Preprocessing?_
+
+1. Handling Missing Values
+
+	•	The dataset had missing values in some columns (e.g., wip). We handled these by filling missing numeric values with the mean of the respective column.
+
+	•	For missing target variable (actual_productivity), rows with missing target values were dropped. 
+
+2. Feature Selection
+
+	•	We removed targeted_productivity and actual_productivity from the features to avoid data leakage.
+
+	•	The column date was also removed as it did not provide relevant information for prediction.
+
+3. Categorical Feature Encoding
+
+	•	One-Hot Encoding was applied to categorical variables such as quarter, department, and day using OneHotEncoder from scikit-learn. This transformed these categorical variables into numerical representations suitable for machine learning.
+
+4. Scaling Features
+
+	•	Missing values in the features were filled using the mean, and all numeric features were scaled for better model performance.
+
+## _Model Training_
+
+We trained several machine learning models to predict the continuous actual_productivity score:
+
+1. Support Vector Regressor (SVR)
+
+•	A linear Support Vector Regressor was used to model the relationship between features and productivity.
+
+•	Model Performance:
+
+      •	 R² Score: 
+     
+      •	 Mean Absolute Error (MAE): 
+
+
+2. Decision Tree Regressor
+
+•	A Decision Tree Regressor was trained to predict the continuous productivity score.
+
+•	Model Performance:
+
+      •	 R² Score: 
+
+      •      Mean Absolute Error (MAE): 
+
+3. Random Forest Regressor
+
+•	A Random Forest Regressor with 200 estimators was used for better predictive power.
+
+•	Model Performance:
+
+      •       R² Score: 
+     
+      •       Mean Absolute Error (MAE): 
+
+4. K-Nearest Neighbors Regressor (KNN)
+
+•	The KNN regressor was tested with different values of k to optimize performance.
+
+•	Model Performance:
+
+	   •	  R² Score: 
+ 
+	   •	  Mean Absolute Error (MAE): 
+    
+5. Gradient Boosting Regressor
+
+•	A Gradient Boosting Regressor was implemented to improve prediction accuracy by combining several weak learners (decision trees) into a strong model. We used 100 estimators and a learning rate of 0.2.
+
+•	Model Performance:
+
+	  •	  R² Score: 
+ 
+	  •	  Mean Absolute Error (MAE): 
+
+## _Results_
+
+The Gradient Boosting Regressor and Random Forest Regressor provided the best performance, with the highest R² score and the lowest error rate. 
+
+## _Conclusion_
+
+This project demonstrates the use of machine learning to predict garment worker productivity. The best-performing model was Random Forest, providing insight into the key factors that impact productivity in garment factories.
+
+
+
+
+## _Credits_ :thumbsup:
+
+Tuan Huynh, Jaiden Flint, Kavita Gopal
