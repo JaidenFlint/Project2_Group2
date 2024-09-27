@@ -133,7 +133,7 @@ The Gradient Boosting Regressor and Random Forest Regressor provided the best pe
 
 ## _Conclusion_
 
-This project demonstrates the use of machine learning to predict garment worker productivity. The best-performing model was Random Forest, providing insight into the key factors that impact productivity in garment factories.
+This project demonstrates the use of machine learning to predict garment worker productivity. The Gradient Boosting Regressor and Random Forest Regressor achieved the best overall performance, providing valuable insights into which factors most strongly influence productivity in garment factories.
 
 
 
