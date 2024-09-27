@@ -82,9 +82,9 @@ We trained several machine learning models to predict the continuous actual_prod
 
 •	Model Performance:
 
-      •	 R² Score: 
+      •	 R² Score: 0.32
      
-      •	 Mean Absolute Error (MAE): 
+      •	 Mean Absolute Error (MAE): 0.096
 
 
 2. Decision Tree Regressor
@@ -93,9 +93,9 @@ We trained several machine learning models to predict the continuous actual_prod
 
 •	Model Performance:
 
-      •	 R² Score: 
+      •	 R² Score: 0.17
 
-      •      Mean Absolute Error (MAE): 
+      •      Mean Absolute Error (MAE): 0.08
 
 3. Random Forest Regressor
 
@@ -103,9 +103,9 @@ We trained several machine learning models to predict the continuous actual_prod
 
 •	Model Performance:
 
-      •       R² Score: 
+      •       R² Score: 0.45
      
-      •       Mean Absolute Error (MAE): 
+      •       Mean Absolute Error (MAE): 0.076
 
 4. K-Nearest Neighbors Regressor (KNN)
 
@@ -113,9 +113,9 @@ We trained several machine learning models to predict the continuous actual_prod
 
 •	Model Performance:
 
-	   •	  R² Score: 
+	   •	  R² Score: 0.39
  
-	   •	  Mean Absolute Error (MAE): 
+	   •	  Mean Absolute Error (MAE): 0.086
     
 5. Gradient Boosting Regressor
 
@@ -123,9 +123,9 @@ We trained several machine learning models to predict the continuous actual_prod
 
 •	Model Performance:
 
-	  •	  R² Score: 
+	  •	  R² Score: 0.42
  
-	  •	  Mean Absolute Error (MAE): 
+	  •	  Mean Absolute Error (MAE): 0.082
 
 ## _Results_
 
