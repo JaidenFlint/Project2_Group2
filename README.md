@@ -131,11 +131,27 @@ We trained several machine learning models to predict the continuous actual_prod
 
 At the beginning the Regression Models applied to the dataset with the WIP column modification of the NaN values to be replaced with the mean value of the column, did not have the best scores for any of the models. All the testing scores were below 50%. Even after applying the Hyper Parameter Tuning by use of the Grid Search function, the scores did no better. The anaylsis was revisted and tested with the NaN values being zero which still did not improve the testing metric scores. Lastly we tried dropping the NaN values along with rows associated with them. This did drop our number of instances down by almost half. Then with rerunning the models again with NaN values dropped, the testing metric scores came up to more reasonable values. The Gradient Boosting Regressor and Random Forest Regressor provided the best performance, with the highest R² score and the lowest error rate after cleaning the data by dropping the NaN instances.
 
+Gradient Boost Regressor
+
+•	A Gradient Boosting Regressor was implemented to improve prediction accuracy by combining several weak learners (decision trees) into a strong model.
+
+•	Model Performance:
+
+	  •	  R² Score: 0.851
+ 
+	  •	  Mean Absolute Error (MAE): 0.0348
+
+Random Forest Regressor
+
+•	Model Performance:
+
+      •       R² Score: 0.831
+     
+      •       Mean Absolute Error (MAE): 0.0337
+
 ## _Conclusion_
 
-This project demonstrates the use of machine learning to predict garment worker productivity. The Gradient Boosting Regressor and Random Forest Regressor achieved the best overall performance, providing valuable insights into which factors most strongly influence productivity in garment factories.
-
-
+This project demonstrates the use of machine learning to predict garment worker productivity. The Gradient Boosting Regressor and Random Forest Regressor achieved the best overall performance, providing valuable insights into which factors most strongly influence productivity in garment factories. We originally had issues with the data and fitting any models to the dataset. All the models produced poor results of less than 50% which was worse than flipping a coin. That means machine learning had no useful purpose for the data set that we were working on. After revisiting the dataset and dropping the NaN values that was present in the dataset, the testing scores and error greatly improved as mentioned in the Results section above. Two models produced testing scores of about 83%-85% while only having an error rate of about 3%.
 
 
 ## _Credits_ :thumbsup:
