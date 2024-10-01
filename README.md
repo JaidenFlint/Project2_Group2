@@ -14,6 +14,9 @@ This project aims to predict the productivity of garment employees based on feat
 
 ## _Dataset_ 
 
+The dataset was retrived from https://archive.ics.uci.edu/dataset/597/productivity+prediction+of+garment+employees
+It was called Productivity Prediction of Garment Employees and donated on 8/2/2020.
+
 The dataset used for this project is Garment Worker Productivity, which consists of 1,197 rows and 15 features, including:
 
   •	date
