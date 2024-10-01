@@ -74,6 +74,7 @@ The target variable, actual_productivity, is continuous and is the primary varia
 
 ## _Model Training_
 
+The first run through of the dataset after cleaning and filling the NaN values with mean values is shown below.
 We trained several machine learning models to predict the continuous actual_productivity score:
 
 1. Support Vector Regressor (SVR)
@@ -93,9 +94,9 @@ We trained several machine learning models to predict the continuous actual_prod
 
 •	Model Performance:
 
-      •	 R² Score: 0.17
+      •	 R² Score: 0.31
 
-      •      Mean Absolute Error (MAE): 0.08
+      • Mean Absolute Error (MAE): 0.08
 
 3. Random Forest Regressor
 
@@ -103,9 +104,9 @@ We trained several machine learning models to predict the continuous actual_prod
 
 •	Model Performance:
 
-      •       R² Score: 0.45
+      •       R² Score: 0.48
      
-      •       Mean Absolute Error (MAE): 0.076
+      •       Mean Absolute Error (MAE): 0.075
 
 4. K-Nearest Neighbors Regressor (KNN)
 
@@ -123,9 +124,41 @@ We trained several machine learning models to predict the continuous actual_prod
 
 •	Model Performance:
 
-	  •	  R² Score: 0.42
+	  •	  R² Score: 0.43
  
 	  •	  Mean Absolute Error (MAE): 0.082
+
+6. Lasso Regressor
+
+•	Model Performance:
+
+	  •	  R² Score: - 0.000685
+ 
+	  •	  Mean Absolute Error (MAE): 0.13
+
+7. Elastic Net Regressor
+
+•	Model Performance:
+
+	  •	  R² Score: - 0.000685
+ 
+	  •	  Mean Absolute Error (MAE): 0.13
+
+8. Ridge Regressor
+
+•	Model Performance:
+
+	  •	  R² Score: 0.188
+ 
+	  •	  Mean Absolute Error (MAE): 0.11
+
+9. Ridge Regressor
+
+•	Model Performance:
+
+	  •	  R² Score: 0.188
+ 
+	  •	  Mean Absolute Error (MAE): 0.11
 
 ## _Results_
 
