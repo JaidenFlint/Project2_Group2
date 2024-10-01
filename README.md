@@ -189,6 +189,17 @@ Random Forest Regressor
 
 This project demonstrates the use of machine learning to predict garment worker productivity. The Gradient Boosting Regressor and Random Forest Regressor achieved the best overall performance, providing valuable insights into which factors most strongly influence productivity in garment factories. We originally had issues with the data and fitting any models to the dataset. All the models produced poor results of less than 50% which was worse than flipping a coin. That means machine learning had no useful purpose for the data set that we were working on. After revisiting the dataset and dropping the NaN values that was present in the dataset, the testing scores and error greatly improved as mentioned in the Results section above. Two models produced testing scores of about 83%-85% while only having an error rate of about 3%.
 
+## _References_
+
+•	Dataset: Garment Worker Productivity Data
+
+•	Google Searches: Used for researching best practices for handling missing values and tuning model hyperparameters. Used http://fliki.ai/ .
+
+•	XpertLearning: Provided foundational knowledge on regression techniques and machine learning model evaluation.
+
+•	TA and Instructor Guidance: Assistance from the teaching assistant and instructor was very helpful in the understanding of feature engineering, model selection, and improving model performance.
+
+
 
 ## _Credits_ :thumbsup:
 
