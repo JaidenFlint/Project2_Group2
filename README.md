@@ -191,7 +191,7 @@ This project demonstrates the use of machine learning to predict garment worker 
 
 ## _References_
 
-•	Dataset: Garment Worker Productivity Data
+•	Dataset: Garment Worker Productivity Data. https://archive.ics.uci.edu/dataset/597/productivity+prediction+of+garment+employees
 
 •	Google Searches: Used for researching best practices for handling missing values and tuning model hyperparameters. Used http://fliki.ai/ .
 
