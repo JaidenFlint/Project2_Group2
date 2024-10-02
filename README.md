@@ -53,6 +53,15 @@ The dataset used for this project is Garment Worker Productivity, which consists
  
 The target variable, actual_productivity, is continuous and is the primary variable we aim to predict using various machine learning models. 
 
+## _Steps of a Regression Model:_
+
+1. Read in the DataFrame: Load your dataset into a pandas DataFrame.
+2. Determine X and y: Identify the feature variables (X) and the target variable (y).
+3. Split the Data: Use train_test_split() to divide the data into training and testing sets.
+4. Scale the Numerical Columns: Apply a scaling method (like StandardScaler or MinMaxScaler) to the numerical columns of the training set, and then use the same scaler to transform the testing set.
+5. Fit the Regression Model: Create and fit your regression model (e.g., linear regression) using the scaled training data.
+6. Check Performance Metrics: Evaluate the model's performance using appropriate metrics, such as Mean Squared Error (MSE) or R² score.
+
 ## _Data Cleaning and Preprocessing?_
 
 1. Handling Missing Values
